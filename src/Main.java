@@ -1,19 +1,18 @@
 public class Main {
     public static void main(String[] args) {
         MyTree<Integer,String> tree = new MyTree<>();
+        int min = -100;
+        int max = 100;
+        int lvl=0;
 
-        tree.put(8,"eight");
-        tree.put(1,"one");
-        tree.put(4,"four");
-        tree.put(5,"five");
+        while (lvl!=6){
+            int rand = min + (int) (Math.random()*max);
+            tree.put( rand,""+rand);
+            if (tree.isLeftNull() | tree.isRightNull()){
+                lvl++;
+            }
+        }
 
-        System.out.println(tree);
-        System.out.println(tree.get(9));
-
-        System.out.println(tree.findMinKey());
-        System.out.println(tree.findMaxKey());
-
-        tree.delete(5);
         System.out.println(tree);
     }
 

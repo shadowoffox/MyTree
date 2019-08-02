@@ -16,6 +16,14 @@ public class MyTree<Key extends Comparable<Key>, Value> {
         }
     }
 
+    public boolean isLeftNull(){
+        return root.left != null;
+    }
+
+    public boolean isRightNull(){
+        return root.right != null;
+    }
+
     public int size(){
         return size(root);
     }
