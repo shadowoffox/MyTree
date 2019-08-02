@@ -1,5 +1,7 @@
 public class Main {
     public static void main(String[] args) {
+        for (int i = 0; i < 20; i++) {
+
         MyTree<Integer,String> tree = new MyTree<>();
         int min = -100;
         int max = 100;
@@ -16,5 +18,6 @@ public class Main {
         System.out.println(tree);
     }
 
+        }
 
 }
